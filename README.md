@@ -49,7 +49,7 @@ else {
 
 When they are needed, comments should be used to explain **why** a particular piece of code does something. Any comments that are used must be kept up-to-date or deleted.
 
-Use the `// Mark:` tag to divide functionality into meaningful, easy-to-navigate sections. (`// Mark: -` can optionally be used to provide a horizontal divider in Xcode's outline)
+Use the `// Mark:` tag to divide functionality into meaningful, easy-to-navigate sections (`// Mark: -` can optionally be used to provide a horizontal divider in Xcode's outline).
 
 **For example:**
 
@@ -130,17 +130,17 @@ struct fixed_lengthRange {
 }
 ```
 
-For functions and initialization methods, prefer named parameters for **all** arguments unless the context is very clear. Include external parameter names if it makes function calls more readable.
+For functions and initialization methods, prefer named parameters for all arguments unless the context is very clear. Include external parameter names if it makes function calls more readable.
 
 ```swift
-func dateFromString(dateString: String) -> NSDate
-func convertPointAt(#column: Int, #row: Int) -> CGPoint
-func timedAction(#delay: NSTimeInterval, perform action: SKAction) -> SKAction!
+func arithmeticMean(numbers: Double...) -> Double
+func containsCharacter(#string: String, #characterToFind: Character) -> Bool
+func join(string s1: String, toString s2: String, withJoiner joiner: String = " ") -> String
 
-// would be called like this:
-dateFromString("2014-03-14")
-convertPointAt(column: 42, row: 13)
-timedAction(delay: 1.0, perform: someOtherAction)
+// Would be called like this:
+arithmeticMean(3, 8.25, 18.75)
+join(string: "We", toString: "Swift", withJoiner: " ❤️ ")
+containsCharacter(string: "City of Hamburg", characterToFind: "x")
 ```
 
 ## Structures and Classes
