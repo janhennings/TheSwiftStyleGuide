@@ -10,6 +10,12 @@ This style guide is suited for projects and collaborations and does not focus on
 * [Whitespace](#whitespace)
 * [Comments and Documentation](#comments-and-documentation)
 * [Naming](#naming)
+* [Types](#types)
+    * [Constants](#constants)
+    * [Optionals](#optionals)
+    * [Struct Initializers](#struct-initializers)
+    * [Type Inference](#type-inference)
+    * [Syntactic Sugar](#syntactic-sugar)
 * [Structures and Classes](#structures-and-classes)
     * [Use of Self](#use-of-self)
     * [Protocol Conformance](#protocol-conformance)
@@ -142,6 +148,53 @@ arithmeticMean(3, 8.25, 18.75)
 join(string: "We", toString: "Swift", withJoiner: " ❤️ ")
 containsCharacter(string: "City of Hamburg", characterToFind: "x")
 ```
+
+
+## Types
+
+Always use Swift's native types when available. Swift offers bridging to Objective-C so you can still use the full set of methods as needed.
+
+**Preferred:**
+
+```swift
+let width = 120.0                                    // Double
+let widthString = (width as NSNumber).stringValue    // String
+```
+
+**Not Preferred:**
+
+```swift
+let width: NSNumber = 120.0                          // NSNumber
+let widthString: NSString = width.stringValue        // NSString
+```
+
+
+### Constants
+
+Use `let`-bindings over `var`-bindings wherever possible (and when in doubt). Only use variables if you absolutely have to since immutability results in much safer and clearer code.
+
+
+### Optionals
+
+Declare variables and function return types as optionals (with `?`) in situations where a value may be absent (`nil`).
+
+When accessing an optional value, use optional chaining as an alternative to forced unwrapping since it won't trigger a runtime error if the optional is `nil`.
+
+```swift
+delegate?.listPresenterDidChangeListLayout?(self, isInitialLayout: true)
+```
+
+Use optional binding when it's more convenient to unwrap once and perform multiple operations.
+
+```swift
+if let listItemIndex = find(presentedListItems, listItem) {
+    // do many things with the listItemIndex
+}
+else {
+    // handle nil
+}
+```
+
 
 ## Structures and Classes
 
