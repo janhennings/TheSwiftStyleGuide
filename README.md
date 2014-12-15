@@ -196,6 +196,27 @@ else {
 ```
 
 
+### Struct Initializers
+
+Use the native Swift struct initializers rather than the legacy CGGeometry constructors.
+
+**Preferred:**
+
+```swift
+let frame = CGRect(x: 0, y: 0, width: 200, height: 400)
+var centerPoint = CGPoint(x: 50, y: 50)
+```
+
+**Not Preferred:**
+
+```swift
+let frame = CGRectMake(0, 0, 200, 400)
+var centerPoint = CGPointMake(50, 50)
+```
+
+Prefer the struct-scope constants `CGRect.infiniteRect`, `CGRect.nullRect`, etc. over global constants `CGRectInfinite`, `CGRectNull`, etc. For existing variables, you can use the shorter `.zeroRect`.
+
+
 ## Structures and Classes
 
 ### Use of Self
