@@ -8,7 +8,7 @@ This style guide is suited for projects and collaborations and does not focus on
 ## Table of Contents
 
 * [Whitespace](#whitespace)
-    [Semicolons](#semicolons)
+    * [Semicolons](#semicolons)
 * [Comments and Documentation](#comments-and-documentation)
 * [Naming](#naming)
     * [Language](#language)
