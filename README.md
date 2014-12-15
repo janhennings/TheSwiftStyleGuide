@@ -240,6 +240,27 @@ var theGuide: NSData? = NSData(contentsOfFile: "Don't Panic")
 **NOTE:** That implies picking descriptive names is really important.
 
 
+### Syntactic Sugar
+
+Use the syntactic sugar Swift provides for the standard library types.
+
+```swift
+let shoppingList: [String]
+let airports: [String: String]
+var serverResponseCode: Int?
+var magicButton: UIButton!
+```
+
+**Not Preferred:**
+
+```swift
+let shoppingList: Array<String>
+let airports: Dictionary<String, String>
+var serverResponseCode: Optional<Int>
+var magicButton: ImplicitlyUnwrappedOptional<UIButton>
+```
+
+
 ## Structures and Classes
 
 ### Use of Self
