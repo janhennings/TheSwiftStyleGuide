@@ -10,6 +10,7 @@ This style guide is suited for projects and collaborations and does not focus on
 * [Whitespace](#whitespace)
 * [Comments and Documentation](#comments-and-documentation)
 * [Naming](#naming)
+    * [Language](#language)
 * [Types](#types)
     * [Constants](#constants)
     * [Optionals](#optionals)
@@ -147,6 +148,25 @@ func join(string s1: String, toString s2: String, withJoiner joiner: String = " 
 arithmeticMean(3, 8.25, 18.75)
 join(string: "We", toString: "Swift", withJoiner: " ❤️ ")
 containsCharacter(string: "City of Hamburg", characterToFind: "x")
+```
+
+
+### Language
+
+Use US English spelling to match Apple's API.
+
+**Preferred:**
+
+```swift
+let favorite = "Swift"
+let color = "orange"
+```
+
+**Not Preferred:**
+
+```swift
+let favourite = "Java"
+var colour = "red"
 ```
 
 
