@@ -217,6 +217,29 @@ var centerPoint = CGPointMake(50, 50)
 Prefer the struct-scope constants `CGRect.infiniteRect`, `CGRect.nullRect`, etc. over global constants `CGRectInfinite`, `CGRectNull`, etc. For existing variables, you can use the shorter `.zeroRect`.
 
 
+### Type Inference
+
+Because of type inference, Swift requires far fewer type declarations. Constants and variables are still explicitly typed, but much of the work of specifying their type is done for you. Type inference is particularly useful when you declare a constant or variable with an initial value. This is often done by assigning a literal value (or literal) to the constant or variable at the point that you declare it.
+
+Therefore prefer compact code and let the compiler infer the type for a constant or variable.
+
+**Preferred:**
+
+```swift
+let meaningOfLive = 42
+var theGuide = NSData(contentsOfFile: "Don't Panic")
+```
+
+**Not Preferred:**
+
+```swift
+let meaningOfLive: Int = 42
+var theGuide: NSData? = NSData(contentsOfFile: "Don't Panic")
+```
+
+**NOTE:** That implies picking descriptive names is really important.
+
+
 ## Structures and Classes
 
 ### Use of Self
