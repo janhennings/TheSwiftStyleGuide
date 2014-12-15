@@ -8,6 +8,7 @@ This style guide is suited for projects and collaborations and does not focus on
 ## Table of Contents
 
 * [Whitespace](#whitespace)
+    [Semicolons](#semicolons)
 * [Comments and Documentation](#comments-and-documentation)
 * [Naming](#naming)
     * [Language](#language)
@@ -50,6 +51,29 @@ else {
 ```
 
 * There should be exactly one blank line between methods to aid in visual clarity and organization. Whitespace within methods should separate functionality, but having too many sections in a method often means you should refactor into several methods.
+
+
+### Semicolons
+
+Swift does not require you to write a semicolon (`;`) after each statement in your code. Semicolons are required, however, if you want to write multiple separate statements on a single line.
+
+Even so do not write multiple statements on a single line separated with semicolons.
+
+**Preferred:**
+
+```swift
+let cat = "🐱"
+println(cat)
+```
+
+**Not Preferred:**
+
+```swift
+let cat = "🐱";
+println(cat);
+// or
+let cat = "🐱"; println(cat)
+```
 
 
 ## Comments and Documentation
