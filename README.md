@@ -21,6 +21,8 @@ This style guide is suited for projects and collaborations and does not focus on
 * [Structures and Classes](#structures-and-classes)
     * [Use of Self](#use-of-self)
     * [Protocol Conformance](#protocol-conformance)
+    * [Singleton](#singleton)
+* [Control Flow](#control-flow)
 * [Closure Expressions](#closure-expressions)
 
 
@@ -363,6 +365,31 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // UITableViewDataSource, UITableViewDelegate conformance goes here
 }
 ```
+
+
+### Singleton
+
+When implementing the singleton pattern use a nested struct to leverage its static constant as a class constant.
+
+```swift
+class SensorManager {
+    // MARK: - Properties
+
+    class var sharedInstance: SensorManager {
+        struct Singleton {
+            static let instance = SensorManager()
+        }
+
+        return Singleton.instance
+    }
+}
+```
+
+
+## Control Flow
+
+Coming soon.
+
 
 ## Closure Expressions
 
