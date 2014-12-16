@@ -1,4 +1,4 @@
-# Style guide for the Swift programming language
+# The style guide for the Swift programming language
 
 These guidelines build on the coding style used in Apple's official references and sample codes, in particular [The Swift Programming Language](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/) book.
 
