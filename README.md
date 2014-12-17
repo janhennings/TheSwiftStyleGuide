@@ -1,4 +1,4 @@
-# The style guide for the Swift programming language
+# Style guide for the Swift programming language
 
 These guidelines build on the coding style used in Apple's official references and sample codes, in particular [The Swift Programming Language](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/) book.
 
@@ -18,7 +18,7 @@ This style guide is suited for projects and collaborations and does not focus on
     * [Struct Initializers](#struct-initializers)
     * [Type Inference](#type-inference)
     * [Syntactic Sugar](#syntactic-sugar)
-* [Structures and Classes](#structures-and-classes)
+* [Classes and Structures](#classes-and--structures)
     * [Use of Self](#use-of-self)
     * [Protocol Conformance](#protocol-conformance)
     * [Singleton](#singleton)
@@ -143,7 +143,7 @@ Check out [NSHipster's Swift Documentation](http://nshipster.com/swift-documenta
 
 ## Naming
 
-Use descriptive names with camel case notation for classes, methods, variables, etc. Struct, enum and class names should be capitalized, while method names and variables should start with a lower case letter.
+Use descriptive names with camelCase notation. Class and structure types should have UpperCamelCase names, while method names and properties should have lowerCamelCase names to differentiate them from type names.
 
 **Preferred:**
 
