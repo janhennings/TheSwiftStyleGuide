@@ -23,6 +23,8 @@ This style guide is suited for projects and collaborations and does not focus on
     * [Protocol Conformance](#protocol-conformance)
     * [Singleton](#singleton)
 * [Control Flow](#control-flow)
+    * [For Loops](#for-loops)
+    * [Conditional Statements](#conditional-statements)
 * [Closure Expressions](#closure-expressions)
 
 
@@ -405,7 +407,34 @@ class SensorManager {
 
 ## Control Flow
 
-Coming soon.
+### For Loops
+
+Prefer the `for-in` loop over the traditional C-Style `for` loop with a condition and an incrementer.
+
+**Preferred:**
+
+```swift
+for _ in 0..<3 {
+    println("Hello three times")
+}
+
+for (index, value) in enumerate(shoppingList) {
+    println("Item \(index + 1): \(value)")
+}
+```
+
+**Not Preferred:**
+
+```swift
+for var i = 0; i < 3; i++ {
+    println("Hello three times")
+}
+
+for var i = 0; i < shoppingList.count; i++ {
+    let item = shoppingList[i]
+    println("Item \(i + 1): \(item)")
+}
+```
 
 
 ## Closure Expressions
