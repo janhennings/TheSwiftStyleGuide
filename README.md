@@ -193,7 +193,7 @@ let color = "orange"
 **Not Preferred:**
 
 ```swift
-let favourite = "Java"
+let favourite = "C#"
 var colour = "red"
 ```
 
